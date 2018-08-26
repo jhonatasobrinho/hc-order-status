@@ -1,9 +1,16 @@
 import React from 'react';
-import {List, ListItem} from 'react-onsenui';
+import { List, Avatar } from 'antd';
 
-const renderRow = (order) => {
+const render = (order) => {
     return (
-        <ListItem key={order.id}>{order.id} - {order.client.name} - {order.status}</ListItem>
+        <List.Item key={order.id} className="order-list-item">
+            <List.Item.Meta
+                avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                title={<a href="https://ant.design">{order.id}</a>}
+                description={order.client.name}
+            />
+            <div>{order.status}</div>
+        </List.Item>
     );
 };
 
@@ -13,8 +20,10 @@ const OrderList = ({orders}) => {
     }
     return (
         <List
+            itemLayout="horizontal"
+            bordered
             dataSource={orders || []}
-            renderRow={renderRow}
+            renderItem={render}
         />
     );
 };
