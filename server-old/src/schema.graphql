@@ -1,0 +1,6 @@
+# import Order from "./generated/prisma.graphql"
+
+type Query {
+    info: String!
+    orders: [Order!]!
+}

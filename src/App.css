@@ -34,20 +34,20 @@
     text-align: left
 }
 
-#identification-page-login {
-    width: 25%;
-    margin: auto;
-}
-
 #identification-page-login .login-form-forgot {
     float: right;
 }
 #identification-page-login .login-form-button {
     width: 100%;
 }
-
 .ant-checkbox-wrapper {
     float: left;
+}
+.order-detail .ant-card-meta {
+    text-align: left;
+}
+.order-list-item .ant-list-item-content {
+    flex: 0 0;
 }
 
 @keyframes App-logo-spin {

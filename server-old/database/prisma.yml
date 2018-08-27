@@ -1,0 +1,8 @@
+#endpoint: ''
+endpoint: https://eu1.prisma.sh/jhonata-sobrinho-2ca832/hc-order-status/dev
+datamodel: datamodel.graphql
+secret: mysecret123
+
+hooks:
+  post-deploy:
+    - graphql get-schema --project database
